@@ -1,41 +1,39 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 
-.container {
+  .container {
     max-width: 600px;
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.todo-list {
+  }
+  .todo-list {
     margin-top: 20px;
-}
-
-.task {
+  }
+  .task {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-}
+  }
 
-label {
+  label {
     margin-left: 10px;
-}
-
-.add-task {
+  }
+  .add-task {
     margin-top: 20px;
-}
-.input{
+  }
+
+  .input {
     width: 81%;
     padding: 8px;
-}
-.button_add {
+  }
+
+  .button_add {
     padding: 8px 16px;
     background-color: #4caf50;
     color: #fff;
@@ -43,16 +41,18 @@ label {
     border-radius: 4px;
     cursor: pointer;
     margin-left: 23px;
-}
+    &:hover {
+      background-color: #45a049;
+    }
+  }
 
-.button_add:hover {
-    background-color: #45a049;
-}
-.taskButton{
+  .taskButton {
     margin-left: auto;
-}
-.custom-hr {
+  }
+
+  .custom-hr {
     height: 1px;
     background-color: #ccc;
     margin: 20px 0;
+  }
 }

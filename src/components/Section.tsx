@@ -1,19 +1,26 @@
-
-import "../styles/style.css";
+import "../styles/style.scss";
+import { TareaA } from "../types/Tarea";
 
 interface Props {
-  textTask: string;
+  tareas: TareaA[];
   buttonTask: string;
+  deletTask: (id: number) => void;
 }
-const Section = ({textTask, buttonTask }: Props) => {
+const Section = ({ tareas, deletTask, buttonTask }: Props) => {
   return (
     <div className="todo-list">
-      <div className="task">
-        <input type="checkbox" />
-        <label>{textTask}</label>
-        <button className="button_add taskButton">{buttonTask}</button>
-      </div>
-      <div className="custom-hr"></div>
+      {tareas.map((tarea: TareaA) => {
+        return (
+          <div className="task">
+            <input type="checkbox" />
+            <label>{tarea.title}</label>
+            <button className="button_add taskButton" onClick={() => deletTask(tarea.id)}>
+              {buttonTask}
+            </button>
+            <div className="custom-hr"></div>
+          </div>
+        );
+      })}
     </div>
   );
 };

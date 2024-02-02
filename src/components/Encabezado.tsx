@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import '../styles/style.css'
+import '../styles/style.scss'
 
 interface Props{
     children: ReactNode
@@ -11,12 +11,14 @@ interface Props{
 const Encabezado = ({title, placeholder, textButton, children}:Props) => {
   return (
     <div className="container">
+      <div className='containaer__cabecera'>
         <h1>{title}</h1>
         <div className="add-task">
             <input type="text" placeholder={placeholder} className="input"/>
             <button  className="button_add">{textButton}</button>
         </div>
-        {children}
+      </div>
+      {children}
     </div>
   )
 }
