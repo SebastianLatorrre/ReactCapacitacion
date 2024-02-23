@@ -18,12 +18,12 @@ const data: TareaA[] = [
     {
         id: 4,
         title: 'Ingles IV',
-        complete: false  
+        complete: true,  
     },
     {
         id: 5,
         title: 'Prueba',
-        complete: false  
+        complete: true,  
     }
 
 ];
