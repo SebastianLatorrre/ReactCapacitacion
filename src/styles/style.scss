@@ -3,24 +3,30 @@ body {
   background-color: #eef5ff;
   margin: 0;
   padding: 0;
+
   .container {
     max-width: 70%;
     margin: 50px auto;
+
     .container__cabecera {
       text-align: center;
+
       h1 {
         font-size: 3rem;
         font-weight: 700;
         margin: 0px;
         color: #205295;
       }
+
       .cabecera__logos {
         display: flex;
         justify-content: center;
+
         .logos {
           margin: 0.1rem;
           width: 40px;
           height: 40px;
+
           &:hover {
             transform: translateX(-3px);
             transition: all 0.4s linear;
@@ -31,11 +37,12 @@ body {
       }
     }
   }
+
   .todo_list {
     margin-top: 20px;
     background-color: #c9d7dd;
     padding: 30px;
-    /* Estilo base del checkbox */
+
     .checkbox-custom {
       display: inline-block;
       position: relative;
@@ -44,43 +51,42 @@ body {
       cursor: pointer;
       font-size: 18px;
       line-height: 1.7;
-    }
 
-    /* Ocultar el checkbox nativo */
-    .checkbox-custom input {
-      position: absolute;
-      opacity: 0;
-      cursor: pointer;
-    }
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
 
-    /* Estilo del tick cuando el checkbox está chequeado */
-    .checkbox-custom .checkmark {
-      position: absolute;
-      top: 4px;
-      left: 0;
-      height: 20px;
-      width: 20px;
-      background-color: #eee;
-      border: 1px solid #ccc;
-    }
-    /* Estilo del tick cuando el checkbox está chequeado */
-    .checkbox-custom input:checked ~ .checkmark {
-      background-color: #205395b6; /* Cambio de color de fondo cuando está chequeado */
-    }
-    /* Estilo del tick cuando el checkbox está chequeado */
-    .checkbox-custom input:checked ~ .checkmark:after {
-      content: "";
-      position: absolute;
-      display: block;
-      left: 6px;
-      top: 2px;
-      width: 6px;
-      height: 12px;
-      border: solid #ffff;
-      border-width: 0 2px 2px 0;
-      transform: rotate(45deg);
+      .checkmark {
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: #eee;
+        border: 1px solid #ccc;
+      }
+
+      input:checked ~ .checkmark {
+        background-color: #205395b6;
+      }
+
+      input:checked ~ .checkmark:after {
+        content: "";
+        position: absolute;
+        display: block;
+        left: 6px;
+        top: 2px;
+        width: 6px;
+        height: 12px;
+        border: solid #ffff;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
     }
   }
+
   .task {
     margin-bottom: 10px;
     display: flex;
@@ -88,10 +94,7 @@ body {
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+
     .conten__logos__actions {
       display: flex;
       margin: auto 0px auto auto;
@@ -101,13 +104,16 @@ body {
   label {
     margin-left: 10px;
   }
+
   .add-task {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+
     input {
       width: 30%;
     }
+
     .add {
       background-color: #40ad55;
       color: #ffff;
@@ -117,10 +123,6 @@ body {
       border: none;
       cursor: pointer;
       border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
     }
   }
 
@@ -143,6 +145,7 @@ body {
     &.delete:hover {
       background-color: #f80000;
     }
+
     &.edit:hover {
       background-color: #40ad55;
     }
