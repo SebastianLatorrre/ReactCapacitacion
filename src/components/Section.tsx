@@ -9,7 +9,7 @@ interface Props {
   
 }
 
-const Section = ({ tareas, deletTask, buttonTask, buttonTaskEdit }: Props) => {
+const Section = ({ tareas, deletTask, buttonTask, buttonTaskEdit, }: Props) => {
   return (
     <div className="todo_list">
       {tareas.map((tarea: TareaA) => (
@@ -30,7 +30,7 @@ const Section = ({ tareas, deletTask, buttonTask, buttonTaskEdit }: Props) => {
               src={buttonTaskEdit}
               alt=""
               className="button edit"
-              
+             
             />
           </div>
 
