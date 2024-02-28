@@ -4,6 +4,7 @@ import { useState } from "react";
 import { getTodos } from "./service/todoService";
 import { TareaA } from "./types/Tarea";
 import "../src/styles/style.scss";
+import Task from './components/Task';
 
 // Obtener tareas de sessionStorage o cargarlas si no existen
 const todos = JSON.parse(sessionStorage.getItem("todos")!) || sessionStorage.setItem("todos", JSON.stringify(getTodos()));
@@ -31,14 +32,16 @@ function App() {
       imgLogoR="src/assets/react.svg"
       imgLogoV="src/assets/vitejs.svg"
       imgLogoT="src/assets/typescript.svg"
-      addTask={agregarTarea} // Pasar la función agregarTarea como prop a Encabezado
-    >
-      <Section
-        buttonTask="src/assets/biggarbagebin_121980.svg"
-        buttonTaskEdit="src/assets/353430-checkbox-edit-pen-pencil_107516.svg"
-        tareas={tareas}
-        deletTask={deletTask}
-      />
+      addTask={agregarTarea} 
+      >
+      <Section>
+        <Task
+          buttonTask="src/assets/biggarbagebin_121980.svg"
+          buttonTaskEdit="src/assets/353430-checkbox-edit-pen-pencil_107516.svg"
+          tareas={tareas}
+          deletTask={deletTask}
+        />
+      </Section>
     </Encabezado>
   );
 }
